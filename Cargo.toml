@@ -1,0 +1,22 @@
+[package]
+name = "mqo-synonym-seed"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+description = "Generate NL synonym sets for measures to improve AI retrieval"
+authors = ["Joe Yen <jyen.tech@gmail.com>"]
+license = "MIT"
+
+[[bin]]
+name = "mqo-synonym-seed"
+path = "src/main.rs"
+
+[lib]
+name = "mqo_synonym_seed"
+path = "src/lib.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+clap = { version = "4", features = ["derive"] }
+sigpipe = "0.1"
